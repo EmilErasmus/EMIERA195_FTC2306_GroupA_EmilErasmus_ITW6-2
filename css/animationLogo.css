@@ -1,0 +1,32 @@
+/* Image properties */
+.linkedInImg, .gitHubImg {
+  width: 150px;
+  height: 150px;
+}
+/* The animation code */
+@keyframes animatedIcon {
+  0% {
+    transform: rotate(0deg);
+    filter: none;
+    border-radius: 0;
+  }
+  30% {
+    transform: rotate(360deg);
+    filter: sepia(1);
+    border-radius: 50%;
+  }
+  100% {
+    transform: rotate(720deg);
+    filter: none;
+    border-radius: 0;
+  }
+}
+
+/* The element to apply the animation to */
+.linkedInImg:hover, .gitHubImg:hover {
+  animation-name: animatedIcon;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  animation-direction: normal;
+}
